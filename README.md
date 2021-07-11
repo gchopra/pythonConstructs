@@ -6,66 +6,6 @@ A set of useful python constructs I wrote (and keep updating)
 	
 
 	
-	
-When dealing with files and input/output -- we use exception handling often
-An example of exception handling:
-	
-	
-Input and Output
-Printing on screen:
-	Reading from keyboard -- number = input("Enter a number: ")
-	Print on screen -- print ("x:",x,"y:",y)
-	Sep="…" and end="…" --- arguments that specify what should separate the output strings on the screen
-	Format() used in positional printing -- "first {a}, second {b}".format(a=11,b=12)
-File handling
-	fhandle = open("<file name>", "<mode r, w or a>")
-	Opening a file creates a file handle -- which is like a buffer
-	Read and write are to the handle
-	Closing handle == flushing it to disk
-	Result = fhandle.read() --> reads entire file as a single string
-	Result = fhandle.readline() --> reads one line
-	Result = fhandle.readlines() --> reads entire file as list of strings
-	Fhandle.seek(n) --> moves to position n
-	Fhandle.read(n) --> reads first n characters
-	End Of File : if fhandle.read() or fhandle.readline() return empty string ""
-	Fhandle.write(s) --> writes string s to file and returns number of characters written
-	Fhandle.writelines(l) --> write a list of lines l to file
-	Fhandle.close() --> flushes and decouples the file handle
-	Fhandle.flush() --> flushes without closing
-	Stripping '\n':
-		For line in fhandle.readlines():
-			S = line[:-1]
-	Stripping whitespaces and '\n':
-		For line in fhandle.readlines():
-			S = line.rstrip()
-	Strip() --> both sides stripped
-	Lstrip() --> strip from left
-String functions:
-	s.find(pattern) --> returns first pos in s where pattern occurs, returns -1 if  not found
-	s.find(pattern, start, end) --> find in slice s[start : end]
-	s.index(pattern), s.index(pattern,start,end) --> like find but raise ValueError if pattern not found
-	s.replace(astr,bstr) --> replaces each astr to bstr
-	s.replace(astr,bstr,n) --> replace at most n copies
-	s.split(",") --> split into chunks between commas
-	s.split(",",n) --> split into n chunks at-most
-	Joinstring.join(columns) --> joins strings with joinstring="," …etc
-	s.capitalize() s.lower()  s.upper() etc…
-	s.center(n) --> string of length n with s in center
-	s.center(n,"*") --> fill with * instead of blanks
-	s.ljust() s.rjust() --> same with left or right justify
-	s.isalpha() s.isnumeric() --> nature of characters in string
-Misc. functions
-	Pass --> a do nothing statement
-	Del() --> contracts the lists and dictionaries and shifts elements, also can un-define a value
-	None is assigned to initialize a name .. And later assign a value
-
-Global scope
-To make immutable value accessible globally, use the "global" keyword to define it in a function
-Mutable values can be used globally by default
-If u update immutable -- it creates a local copy
-
-
-	
 Data Structures
 Arrays and list -- (sequences of values)
 Dictionaries -- key-value pairs
